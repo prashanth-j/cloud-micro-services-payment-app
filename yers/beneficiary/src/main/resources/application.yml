@@ -1,0 +1,30 @@
+
+spring:
+  application:
+    name: bene
+
+  jpa:
+    generate-ddl: true
+    show-sql: true
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: https://eurekah.cfapps.io/eureka
+
+server:
+  port: 8084
+
+producer:
+  ribbon:
+    ServerListRefreshInterval: 5000
+
+---
+spring:
+  profiles: dev
+
+security:
+  basic:
+    enabled: false
