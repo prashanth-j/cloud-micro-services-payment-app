@@ -1,0 +1,13 @@
+---
+applications:
+- name: account
+  host: accounthost
+  domain: cfapps.io
+  instances: 1
+  path: target/account-0.1.jar
+  memory: 750MB
+  random-route: false
+  env:
+    SPRING_PROFILES_ACTIVE: dev
+services:
+- mysql 
